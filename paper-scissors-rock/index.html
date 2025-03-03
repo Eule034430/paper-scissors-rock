@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paper Scissors Rock</title>
+    <script src="psr.js" defer></script>
+    <link rel="stylesheet" href="psr.css" />
+  </head>
+  <body>
+    <nav>
+      <h1>Paper Scissors Rock</h1>
+    </nav>
+
+    <!-- div to move game screen to the centre -->
+    <div id="whole-screen">
+      <!-- game screen div -->
+      <div class="game">
+        <div id="game-image">
+          <!-- Player display -->
+          <div>
+            <p class="score">User: <span id="user-score">0</span></p> <!--user score-->
+            <img id="player-image" src="images/rock.png" alt="rock">
+            <p id="user-play"></p>
+          </div>
+          <!-- Result display -->
+          <p id="result-display"><b>Choose your play</b></p>
+          <!-- Computer display -->
+          <div>
+            <p class="score">cpu: <span id="cpu-score">0</span></p> <!--cpu score-->
+            <img id="computer-image" src="images/rock.png" alt="rock">
+            <p id="computer-play"></p>
+          </div>
+        </div>
+
+        <!-- User choices -->
+        <div id="psr-images">
+          <!-- paper -->
+          <div onclick="playGame(0)" id="paper">
+            <img
+              class="user-image"
+              id="paper-image"
+              src="images/paper.png"
+              alt="paper"
+            />
+            <p>Paper</p>
+          </div>
+          <!-- scissors -->
+          <div onclick="playGame(1)" id="scissors">
+            <img
+              class="user-image"
+              id="scissors-image"
+              src="images/scissors.png"
+              alt="scissors"
+            />
+            <p>Scissors</p>
+          </div>
+          <!-- rock -->
+          <div onclick="playGame(2)" id="rock">
+            <img
+              class="user-image"
+              id="rock-image"
+              src="images/rock.png"
+              alt="rock"
+            />
+            <p>Rock</p>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
